@@ -1,0 +1,14 @@
+{{ define "unauthorized" }}
+{{template "header" .}}
+
+<main class="px-3 m-auto text-center" style="width: 50%;">
+
+    <h1>401</h1>
+    <p>You are currently not logged in. Please log in and try this action again.</p>
+    <a class="btn btn-secondary" href="/" role="button">Go home</a>
+
+    
+</main>
+
+{{template "footer" .}}
+{{ end }}

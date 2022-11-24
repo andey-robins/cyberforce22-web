@@ -1,0 +1,40 @@
+{{ define "admin" }}
+{{template "header" .}}
+
+<main class="px-3 m-auto text-center mb-5 w-75">
+
+    <div class="row bg-light rounded mb-5 p-3">
+        <h3>Files</h3>
+        {{ range .filePayload }}
+        <div class="row">
+            <div class="col-6">
+                <div class="row item">
+                    <p>{{ .FileName }}</p>
+                </div>
+                
+            </div>
+            <div class="col-6">
+                <div class="row item">
+                    <p>{{ .File }}</p>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+
+    <div class="row bg-light rounded p-3">
+        <h3>Emails</h3>
+
+        {{ range .emailPayload }}
+            <div class="row item">
+                <p>{{ .Email }}</p>
+            </div>
+        {{ end }}
+
+    </div>
+
+
+</main>
+
+{{template "footer" .}}
+{{ end }}
